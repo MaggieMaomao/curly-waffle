@@ -9,24 +9,22 @@ class Solution:
         my_pen.speed("fastest")
         my_pen.color("black")
 
-
-#coordinates
-        self.__draw(my_pen, -180, 50, 3, "white", False)
-        self.__draw(my_pen, -89, 101, 3, "white", True)
-        self.__draw(my_pen, 40, 170, 3, "white", True)
-        self.__draw(my_pen, -180, 50, 3, "white", False)
-        self.__draw(my_pen, -80, 0, 3, "white", True)
-        self.__draw(my_pen, -40, 0, 3, "white", True)
-        self.__draw(my_pen, -180, 50, 3, "white", False)
-        self.__draw(my_pen, -180, 0, 3, "white", True)
-        self.__draw(my_pen, -200, 0, 3, "white", True)
-        self.__draw(my_pen, -205, -20, 3, "white", True)
-        self.__draw(my_pen, -140, -140, 3, "white", True)
-        self.__draw(my_pen, -110, -90, 3, "white", True)
-        self.__draw(my_pen, -70, -87, 3, "white", True)
-        self.__draw(my_pen, -20, -137, 3, "white", True)
-
+        self.__draw(my_pen, 230, 210, 3, "white", False)
+        self.__draw(my_pen, 190, 170, 3, "white", True)
+        self.__draw(my_pen, 230, 170, 3, "white", True)
+        self.__draw(my_pen, 190, 170, 3, "white", True)
+        self.__draw(my_pen, 220, 130, 3, "white", True)
         
+        self.__draw(my_pen, 190, 170, 3, "white", True)
+        self.__draw(my_pen, 175, 165, 5, "white", True)
+        self.__draw(my_pen, 150, 150, 3, "white", True)
+        self.__draw(my_pen, 90, 100, 3, "white", True)
+        self.__draw(my_pen, 60, 20, 3, "white", True)
+
+        self.__draw(my_pen, 40, 23, 3, "white", True)
+        self.__draw(my_pen, 10, 30, 3, "white", True)
+        self.__draw(my_pen, 0, 60, 3, "white", True)
+        self.__draw(my_pen, 25, 80, 3, "white", True)
 
     def __draw(self, pen, x, y, radius, color, line) -> None:
         self.moveTo(pen, x, y, color, line)
@@ -60,4 +58,4 @@ if __name__ == '__main__':
     solution.draw()
 
     turtle.done()
-    turtle.Screen().exitonclick()
+    
