@@ -1,6 +1,11 @@
+from turtle_drawer import TurtleDrawer
+
 import turtle
 
 class Solution:
+
+    def __init__(self):
+         self.drawer = TurtleDrawer()
 
     def draw(self) -> None:
         my_window = turtle.Screen()
@@ -9,8 +14,6 @@ class Solution:
         my_pen.speed("fastest")
         my_pen.color("black")
 
-
-#coordinates
         self.__draw(my_pen, -180, 50, 3, "white", False)
         self.__draw(my_pen, -89, 101, 3, "white", True)
         self.__draw(my_pen, 40, 170, 3, "white", True)
@@ -29,31 +32,8 @@ class Solution:
         
 
     def __draw(self, pen, x, y, radius, color, line) -> None:
-        self.moveTo(pen, x, y, color, line)
-        self.drawCircle(pen, x, y, radius, color)
-
-
-    def moveTo(self, pen, x, y, color, track) -> None:
-        if track:
-            pen.down()
-        else:
-            pen.up()
-        pen.color(color)
-        pen.goto(x, y)
-
-    
-    def drawCircle(self, pen, x, y, radius, color) -> None:
-        pen.up()
-        pen.goto(x, y - radius)
-        pen.down()
-        pen.fillcolor("white")
-        pen.begin_fill()
-        pen.circle(radius)
-        pen.end_fill()
-        pen.up()
-        pen.goto(x, y)
-        pen.down()
-
+        self.drawer.move_to(x, y, color, line)
+        self.drawer.draw_circle(x, y, radius)
 
 if __name__ == '__main__':
     solution = Solution()

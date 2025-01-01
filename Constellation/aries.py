@@ -1,7 +1,11 @@
+from turtle_drawer import TurtleDrawer
+
 import turtle
 
 class Solution:
-  def draw(self):
+
+    def __init__(self):
+         self.drawer = TurtleDrawer()
     my_window = turtle.Screen()
     my_window.bgcolor("black")
     my_pen = turtle.Turtle()
@@ -42,22 +46,24 @@ class Solution:
         my_pen.goto(stars[i - 1][0], stars[i - 1][1])
         my_pen.pendown()
 
-  def drawCircle(self, pen, x, y, radius, color):
-    pen.up()
-    pen.goto(x, y)
-    pen.down()
+    def drawCircle(self, pen, x, y, radius, color):
+      pen.up()
+      pen.goto(x, y)
+      pen.down()
 
-    pen.color(color)
-    pen.begin_fill()
-    pen.circle(radius)
-    pen.end_fill()
+      pen.color(color)
+      pen.begin_fill()
+      pen.circle(radius)
+      pen.end_fill()
 
-  def drawGuide():
-    self.drawCircle(my_pen,0,0,2,"blue")
-    self.drawCircle(my_pen,100,0,2,"blue")
-    self.drawCircle(my_pen,0,100,2,"blue")
-    self.drawCircle(my_pen,-100,0,2,"blue")
-    self.drawCircle(my_pen,0,-100,2,"blue")
+    def drawGuide():
+      self.drawCircle(my_pen,0,0,2,"blue")
+      self.drawCircle(my_pen,100,0,2,"blue")
+      self.drawCircle(my_pen,0,100,2,"blue")
+      self.drawCircle(my_pen,-100,0,2,"blue")
+      self.drawCircle(my_pen,0,-100,2,"blue")
+
+
 
 if __name__ == '__main__':
   solution = Solution()
